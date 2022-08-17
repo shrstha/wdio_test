@@ -1,4 +1,4 @@
-import VisibilityPage from  '../pageobjects/visibility.page';
+import VisibilityPage from  '../../pageobjects/uitestingplayground/visibility.page';
 
 describe('UI Testing Playground', () => {
     it('Visibility Test', async () => {
