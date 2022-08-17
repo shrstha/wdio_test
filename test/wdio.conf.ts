@@ -50,12 +50,11 @@ export const config: Options.Testrunner = {
     // will be called from there.
     //
     specs: [
-        './test/specs/uitestingplayground/**/*.ts'
+        './test/specs/**/*.ts'
     ],
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
-        './test/specs/saucedemo/**/*.ts'
         
         
 

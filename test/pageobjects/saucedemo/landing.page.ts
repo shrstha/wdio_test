@@ -69,6 +69,31 @@ class LandingPage extends Page {
         return $('.complete-text')
     }
 
+    public async login(username: string, password: string){
+        await this.usernameInputField.setValue(username);
+        await this.passwordInputField.setValue(password);
+        await this.loginBtn.click();
+    }
+
+    public async addToCart() {
+        await this.addToCartBtn.click();
+    }
+
+    public async goToCart() {
+        await this.cartBadge.click();
+    }
+
+    public async checkout(firstName: string, lastName: string, zipCode: string) {
+        await this.checkoutBtn.click();
+        await this.firstNameInputField.setValue(firstName);
+        await this.lastNameInputField.setValue(lastName);
+        await this.zipCodeInputField.setValue(zipCode);
+    }
+
+    public async continue() {
+        await this.continueBtn.click();
+    }
+
     /**
      * overwrite specific options to adapt it to page object
      */
