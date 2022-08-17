@@ -8,7 +8,8 @@ describe('UI Testing Playground', () => {
         await expect((await OverlappedPage.idTextField).setValue("1"));
         await expect(OverlappedPage.nameTextField).toBeExisting();
         await expect((await OverlappedPage.nameTextField).scrollIntoView());
-        await expect((await OverlappedPage.nameTextField).setValue("Test"));
+        await OverlappedPage.nameTextField.setValue("Test");
+        await expect(OverlappedPage.nameTextField).toHaveValue("Test");
 
     });
 });

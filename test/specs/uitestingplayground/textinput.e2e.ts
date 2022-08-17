@@ -8,10 +8,8 @@ describe('UI Testing Playground', () => {
         await expect(TextInputPage.textInputField).toHaveText("");
         await expect(TextInputPage.updateBtn).toBeExisting();
         await expect(TextInputPage.updateBtn).toHaveText("Button That Should Change it's Name Based on Input Value");
-        await expect(TextInputPage.textInputField.setValue("Test"));
-        await browser.pause(5000)
+        await TextInputPage.textInputField.setValue("Test");
         await expect(TextInputPage.updateBtn.click());
-        // await browser.pause(10000);
         await expect(TextInputPage.updateBtn).toHaveText("Test");
 
 

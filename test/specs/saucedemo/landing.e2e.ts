@@ -1,6 +1,5 @@
 import LandingPage from '../../pageobjects/saucedemo/landing.page';
 import { TEST_USER } from '../../pageobjects/constants/users';
-import landingPage from '../../pageobjects/saucedemo/landing.page';
 
 describe('Sauce Demo', () => {
     it('Landing Page', async () => {
@@ -35,8 +34,6 @@ describe('Sauce Demo', () => {
         await expect(browser).toHaveUrl('https://www.saucedemo.com/checkout-complete.html')
         await expect(LandingPage.completeHeaderLabel).toHaveText('THANK YOU FOR YOUR ORDER')
         await expect(LandingPage.completeTextLabel).toHaveText('Your order has been dispatched, and will arrive just as fast as the pony can get there!')
-
-        await browser.pause(5000)
     });
 });
 
